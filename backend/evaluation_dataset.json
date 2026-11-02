@@ -1,0 +1,108 @@
+{
+  "dataset_name": "StudyAI Climate Science RAG Evaluation",
+  "source_document": "climate_science_study_notes.pdf",
+  "source_note": "Expected answers are grounded only in the uploaded five-page study notes. Page numbers refer to the page numbers printed in the document.",
+  "evaluation_questions": [
+    {
+      "id": "Q01",
+      "topic": "Weather vs climate",
+      "question": "How is climate different from weather?",
+      "expected_answer": "Weather refers to short-term atmospheric conditions, such as today's temperature, wind, or rainfall. Climate refers to long-term patterns and averages of weather, typically assessed over periods of decades.",
+      "relevant_pages": [
+        1
+      ],
+      "evaluation_type": "definition"
+    },
+    {
+      "id": "Q02",
+      "topic": "Enhanced greenhouse effect",
+      "question": "Explain the difference between the natural greenhouse effect and the enhanced greenhouse effect.",
+      "expected_answer": "The natural greenhouse effect is a physical process in which greenhouse gases absorb and emit some of Earth's outgoing infrared radiation, making Earth warmer than it would be without these gases. The enhanced greenhouse effect is the additional influence caused by rising greenhouse-gas concentrations, especially from human activities, which changes Earth's energy balance and causes additional warming.",
+      "relevant_pages": [
+        2
+      ],
+      "evaluation_type": "comparison"
+    },
+    {
+      "id": "Q03",
+      "topic": "Carbon dioxide and warming",
+      "question": "Why does increasing carbon dioxide tend to warm the climate?",
+      "expected_answer": "Increasing carbon dioxide increases the atmosphere's absorption and emission of infrared radiation. This alters Earth's energy balance, so the system warms until the energy leaving the planet balances the incoming energy again.",
+      "relevant_pages": [
+        2
+      ],
+      "evaluation_type": "causal_explanation"
+    },
+    {
+      "id": "Q04",
+      "topic": "Greenhouse gases",
+      "question": "Name four greenhouse gases mentioned in the notes and give one source or characteristic of each.",
+      "expected_answer": "The notes mention carbon dioxide, methane, nitrous oxide, and water vapour. Carbon dioxide is released by fossil-fuel burning, cement production, and land-use change. Methane comes from sources including fossil-fuel systems, livestock, landfills, and wetlands. Nitrous oxide is associated with agricultural soils and some industrial activities. Water vapour is an important greenhouse gas whose atmospheric amount responds strongly to temperature and acts mainly as a feedback in current global warming.",
+      "relevant_pages": [
+        2
+      ],
+      "evaluation_type": "multi_fact"
+    },
+    {
+      "id": "Q05",
+      "topic": "Carbon cycle",
+      "question": "What role does photosynthesis play in the carbon cycle?",
+      "expected_answer": "Plants and other photosynthetic organisms take in carbon dioxide and use light energy to build organic matter. In this way, photosynthesis removes carbon dioxide from the surrounding air or water and incorporates carbon into organic molecules.",
+      "relevant_pages": [
+        3
+      ],
+      "evaluation_type": "process_explanation"
+    },
+    {
+      "id": "Q06",
+      "topic": "Carbon budget",
+      "question": "What is a carbon budget, and why can carbon accumulate in the atmosphere?",
+      "expected_answer": "A carbon budget compares the carbon entering a reservoir with the carbon leaving it over a specified period. Human emissions add carbon to the atmosphere. Land ecosystems and the ocean absorb a portion of these emissions, while the remainder accumulates in the atmosphere.",
+      "relevant_pages": [
+        3
+      ],
+      "evaluation_type": "concept_and_explanation"
+    },
+    {
+      "id": "Q07",
+      "topic": "Evidence of climate change",
+      "question": "Which independent observations do scientists use as evidence to study climate change? Give at least three.",
+      "expected_answer": "The notes list global temperature records, ocean heat content, changes in glacier and ice-sheet mass or extent, sea-level measurements, and seasonal or ecological shifts such as changes in flowering times and species ranges. Scientists compare multiple independent observations because no single measurement tells the whole story.",
+      "relevant_pages": [
+        4
+      ],
+      "evaluation_type": "list_and_explanation"
+    },
+    {
+      "id": "Q08",
+      "topic": "Scientific uncertainty",
+      "question": "Does scientific uncertainty mean that nothing is known about climate change? Explain using the notes.",
+      "expected_answer": "No. The notes say researchers quantify uncertainty, compare independent datasets, test physical explanations, and update estimates as measurements improve. Natural variability can affect individual years and regions, while long-term global trends require analysis over longer periods.",
+      "relevant_pages": [
+        4
+      ],
+      "evaluation_type": "reasoning"
+    },
+    {
+      "id": "Q09",
+      "topic": "Mitigation vs adaptation",
+      "question": "What is the difference between climate-change mitigation and adaptation? Give one example of each.",
+      "expected_answer": "Mitigation reduces the causes of future climate change by limiting greenhouse-gas emissions or enhancing removals. An example is generating electricity with low-carbon sources or reducing methane leaks. Adaptation reduces harm from climate impacts. An example is heat-health warning systems, flood protection, or water conservation.",
+      "relevant_pages": [
+        1,
+        5
+      ],
+      "evaluation_type": "comparison_with_examples"
+    },
+    {
+      "id": "Q10",
+      "topic": "Apply mitigation and adaptation",
+      "question": "If a city plants shade trees to reduce people's heat exposure, is this mitigation or adaptation? Explain.",
+      "expected_answer": "This is adaptation. The notes define adaptation as adjustments that reduce harm from actual or expected climate impacts. Planting shade trees to reduce heat exposure reduces harm from heat; it is not described as an action to reduce greenhouse-gas emissions or increase greenhouse-gas removal.",
+      "relevant_pages": [
+        5
+      ],
+      "evaluation_type": "application"
+    }
+  ]
+}

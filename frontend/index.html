@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyAI | Document Assistant</title>
+    <link rel="stylesheet" href="/frontend/style.css?v=3">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <div>
+                    <h2>StudyAI</h2>
+                    <p>Document assistant</p>
+                </div>
+            </div>
+
+            <button id="newChatBtn" class="secondary-button">+ New question</button>
+
+            <div class="sidebar-heading">YOUR DOCUMENTS</div>
+            <div id="documentList" class="document-list">
+                <p class="muted">Loading documents...</p>
+            </div>
+
+            <button id="addDocumentsBtn" class="primary-button">+ Add documents</button>
+            <button id="clearDocumentsBtn" class="secondary-button">Clear documents</button>
+            <button id="themeBtn" class="theme-button">Toggle dark mode</button>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Ask your documents</h1>
+                    <p>Clear answers from your uploaded PDFs.</p>
+                </div>
+                <span id="statusBadge" class="status">Ready</span>
+            </header>
+
+            <section class="chat-area">
+                <div id="welcome" class="welcome">
+                    <div class="welcome-icon">✦</div>
+                    <h2>What would you like to learn?</h2>
+                    <p>Choose a document and ask a question about its contents.</p>
+
+                    <div class="suggestions">
+                        <button class="suggestion"
+                            data-question="Summarize the main topics in this document.">
+                            Summarize document
+                        </button>
+                        <button class="suggestion"
+                            data-question="Explain the most important concepts in this document.">
+                            Explain key concepts
+                        </button>
+                        <button class="suggestion"
+                            data-question="Create revision questions from this document.">
+                            Create revision questions
+                        </button>
+                    </div>
+                </div>
+
+                <div id="chatMessages" class="chat-messages"></div>
+            </section>
+
+            <section class="composer-section">
+                <div class="document-filter">
+                    <label for="documentSelector">Answer from</label>
+                    <select id="documentSelector">
+                        <option value="">All documents</option>
+                    </select>
+                </div>
+
+                <form id="questionForm" class="composer">
+                    <textarea id="questionInput" rows="1"
+                        placeholder="Ask a question about your documents..."
+                        required></textarea>
+                    <button id="sendBtn" type="submit" aria-label="Send question">↑</button>
+                </form>
+
+                <p class="disclaimer">
+                    Answers are based on retrieved document content. Check the cited source for important details.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <input id="fileInput" type="file" accept=".pdf,application/pdf" multiple hidden>
+
+    <div id="uploadModal" class="modal hidden">
+        <div class="modal-card">
+            <button id="closeModalBtn" class="modal-close" aria-label="Close">×</button>
+            <h2>Add documents</h2>
+            <p>Select one or more PDF files for your study collection.</p>
+
+            <label for="fileInput" class="drop-zone">
+                <span class="upload-icon">↑</span>
+                <strong>Choose PDF files</strong>
+                <span>PDF documents only</span>
+            </label>
+
+            <div id="selectedFiles" class="selected-files"></div>
+            <button id="uploadBtn" class="primary-button" disabled>Upload selected PDFs</button>
+            <p id="uploadStatus" class="muted"></p>
+        </div>
+    </div>
+
+    <script src="/frontend/script.js?v=3"></script>
+</body>
+</html>
